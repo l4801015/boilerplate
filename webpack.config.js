@@ -2,7 +2,7 @@ const path = require("path");
 const htmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-	entry: "./src/index.js",
+	entry: "./src/index.ts",
 	output: {
 		path: path.resolve(__dirname, "dist"),
 		filename: "bundle.js",
@@ -20,6 +20,11 @@ module.exports = {
 			//		use: ["style-loader", "css-loader"],
 			//	},
 			{
+				test: /\.tsx?$/,
+				use: "ts-loader",
+				exclude: /node_modules/,
+			},
+			{
 				test: /\.s[ac]ss$/i,
 				use: [
 					// Creates `style` nodes from JS strings
@@ -35,10 +40,13 @@ module.exports = {
 				type: "asset/resource",
 			},
 			{
-        test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: 'asset/resource',
-      },
+				test: /\.(woff|woff2|eot|ttf|otf)$/i,
+				type: "asset/resource",
+			},
 		],
+	},
+	resolve: {
+		extensions: [".tsx", ".ts", ".js"],
 	},
 	devServer: {
 		static: {
