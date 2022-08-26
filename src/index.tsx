@@ -1,8 +1,18 @@
-import React from 'react';
-import { render } from 'react-dom';
+import eruda from "eruda";
+eruda.init();
+import React from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
+import './styles.scss';
 
-const App = () => {
-	return <div>Heljdhddhdlo World</div>;
-}
+const container = document.getElementById("root");
+const root = createRoot(container);
 
-render(<App />, document.getElementById('root'));
+root.render(
+	<React.StrictMode>
+		<BrowserRouter>
+		  <App />
+		</BrowserRouter>
+	</React.StrictMode>
+);

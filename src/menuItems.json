@@ -1,0 +1,46 @@
+{
+	"items": [
+		{
+			"id": "1",
+			"name": "кино и сериалы",
+			"parentId": "0",
+			"url": "/"
+		},
+		{
+			"id": "2",
+			"name": "рекомендации",
+			"parentId": "1",
+			"url": "/"
+		},
+		{
+			"id": "3",
+			"name": "новинки",
+			"parentId": "1",
+			"url": "/novelty"
+		},
+		{
+			"id": "4",
+			"name": "каталог",
+			"parentId": "1",
+			"url": "/catalog"
+		},
+		{
+			"id": "5",
+			"name": "подписки",
+			"parentId": "1",
+			"url": "/subscriptions"
+		},
+		{
+			"id": "6",
+			"name": "поиск",
+			"parentId": "1",
+			"url": "/search"
+		},
+		{
+			"id": "7",
+			"name": "детям",
+			"parentId": "0",
+			"url": "/kids"
+		}
+	]
+}

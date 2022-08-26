@@ -33,6 +33,7 @@ module.exports = {
 					"css-loader",
 					// Compiles Sass to CSS
 					"sass-loader",
+					"postcss-loader",
 				],
 			},
 			{
@@ -48,6 +49,7 @@ module.exports = {
 	resolve: {
 		extensions: [".tsx", ".ts", ".js"],
 	},
+	devtool: 'inline-source-map',
 	devServer: {
 		static: {
 			directory: path.join(__dirname, "/src"),
